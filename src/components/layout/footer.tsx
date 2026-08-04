@@ -4,15 +4,17 @@ import { services } from "@/content/site-content";
 import { siteConfig } from "@/lib/site";
 import { formatPhoneHref } from "@/lib/utils";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
+import { BrandLogo } from "@/components/shared/brand-logo";
 
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-[#07152f] text-slate-300">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:px-8">
         <div className="lg:col-span-4">
-          <p className="font-display text-2xl font-semibold text-white">
-            Safety Sphere Solution
-          </p>
+          <div className="inline-flex rounded-md bg-white px-3 py-2">
+            <BrandLogo className="h-11" />
+          </div>
+          <p className="sr-only">Safety Sphere Solution</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
             {siteConfig.tagline}. Empowering industries with safer, smarter and
             sustainable workplaces across India.

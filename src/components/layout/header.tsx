@@ -10,6 +10,7 @@ import { cn, formatPhoneHref } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { SearchDialog } from "@/components/layout/search-dialog";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
+import { BrandLogo } from "@/components/shared/brand-logo";
 
 export function Header() {
   const pathname = usePathname();
@@ -39,18 +40,8 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
-        <Link href="/" className="group flex min-w-0 items-center gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-navy text-sm font-bold text-white shadow-sm ring-2 ring-brand-red/80 dark:bg-white dark:text-brand-navy">
-            SS
-          </span>
-          <span className="min-w-0">
-            <span className="block truncate font-display text-lg font-semibold leading-tight text-brand-navy dark:text-white sm:text-xl">
-              Safety Sphere
-            </span>
-            <span className="block text-[11px] font-medium uppercase tracking-[0.18em] text-slate-500 dark:text-slate-300">
-              Solution
-            </span>
-          </span>
+        <Link href="/" className="group min-w-0 shrink-0" aria-label="Safety Sphere Solution home">
+          <BrandLogo priority className="dark:brightness-110" />
         </Link>
 
         <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
