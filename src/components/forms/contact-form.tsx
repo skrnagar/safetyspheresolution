@@ -103,14 +103,17 @@ export function ContactForm() {
         </label>
         <select
           id="service"
-          className="flex h-11 w-full rounded-md border border-slate-200 bg-white px-3.5 text-sm"
+          className="flex h-12 w-full rounded-lg border border-slate-200 bg-white px-3.5 text-base sm:h-11 sm:text-sm"
           {...register("service")}
         >
           <option>Fire Safety Engineering</option>
+          <option>Electrical & Fire Compliance Audits</option>
           <option>EHS Engineering & Consulting</option>
+          <option>Construction HSE Management</option>
           <option>Professional EHS Training</option>
           <option>Digital Automation & AI</option>
           <option>Safety Consultancy & Audits</option>
+          <option>Physical Security & Life Safety</option>
           <option>General Consultation</option>
         </select>
       </div>
@@ -125,7 +128,12 @@ export function ContactForm() {
         ) : null}
       </div>
 
-      <Button type="submit" size="lg" disabled={status === "loading"}>
+      <Button
+        type="submit"
+        size="lg"
+        className="h-12 w-full sm:w-auto"
+        disabled={status === "loading"}
+      >
         {status === "loading" ? "Sending..." : "Send Message"}
       </Button>
 

@@ -9,6 +9,10 @@
   --surface: #ffffff;
   --muted: #64748b;
   --line: #e2e8f0;
+  --header-h: 3.75rem;
+  --mobile-bar-h: 4.25rem;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
 }
 
 @theme inline {
@@ -26,6 +30,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -37,6 +43,14 @@ body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   font-feature-settings: "ss01" on, "cv11" on;
   letter-spacing: -0.011em;
+  overflow-x: hidden;
+  padding-bottom: calc(var(--mobile-bar-h) + var(--safe-bottom));
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
 }
 
 .font-display {
@@ -54,8 +68,33 @@ body {
   outline-offset: 2px;
 }
 
-/* Soft section bands */
+/* Prefer touch-friendly hit areas */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Prevent iOS zoom-on-focus for form fields under 16px */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+@media (min-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 0.875rem;
+  }
+}
+
 .section-band {
-  background:
-    linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+/* Mobile menu open: lock page scroll */
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
 }

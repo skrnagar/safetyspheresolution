@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { MobileActionBar } from "@/components/layout/mobile-action-bar";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { OrganizationJsonLd } from "@/components/shared/json-ld";
 import { siteConfig } from "@/lib/site";
@@ -22,6 +23,14 @@ const fraunces = Fraunces({
   weight: ["600", "700"],
   preload: true,
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+  themeColor: "#0B1F45",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -113,6 +122,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
+        <MobileActionBar />
       </body>
     </html>
   );

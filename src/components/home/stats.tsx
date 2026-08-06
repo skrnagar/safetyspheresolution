@@ -43,11 +43,11 @@ function StatItem({
 
   return (
     <div className="text-center">
-      <p className="font-display text-4xl font-semibold text-white md:text-5xl">
+      <p className="font-display text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
         {display}
         <span className="text-brand-red">{suffix}</span>
       </p>
-      <p className="mt-2 text-sm text-white/70">{label}</p>
+      <p className="mt-1.5 text-xs text-white/70 sm:mt-2 sm:text-sm">{label}</p>
     </div>
   );
 }
@@ -57,11 +57,11 @@ export function Stats() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative overflow-hidden bg-brand-navy py-14">
+    <section className="relative overflow-hidden bg-brand-navy py-10 sm:py-14">
       <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(230,57,70,0.18),transparent_40%,rgba(255,255,255,0.05))]" />
       <div
         ref={ref}
-        className="relative mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 sm:px-6 md:grid-cols-4 lg:px-8"
+        className="relative mx-auto grid max-w-7xl grid-cols-2 gap-5 px-4 sm:gap-8 sm:px-6 md:grid-cols-4 lg:px-8"
       >
         {stats.map((stat) => (
           <StatItem key={stat.label} {...stat} active={inView} />

@@ -9,7 +9,7 @@ import { BrandLogo } from "@/components/shared/brand-logo";
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-[#07152f] text-slate-300">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:gap-10 sm:px-6 sm:py-14 lg:grid-cols-12 lg:px-8">
         <div className="lg:col-span-4">
           <div className="inline-flex rounded-md bg-white px-3 py-2">
             <BrandLogo className="h-11" />
@@ -58,7 +58,7 @@ export function Footer() {
               ["Contact", "/contact"],
             ].map(([label, href]) => (
               <li key={href}>
-                <Link href={href} className="hover:text-white">
+                <Link href={href} className="inline-flex min-h-10 items-center hover:text-white">
                   {label}
                 </Link>
               </li>
@@ -75,7 +75,7 @@ export function Footer() {
               <li key={service.slug}>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="hover:text-white"
+                  className="inline-flex min-h-10 items-center hover:text-white"
                 >
                   {service.title}
                 </Link>

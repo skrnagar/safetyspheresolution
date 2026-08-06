@@ -7,17 +7,17 @@ import { SectionHeading } from "@/components/shared/section-heading";
 
 export function Services() {
   return (
-    <section id="services" className="py-20 md:py-28">
+    <section id="services" className="py-14 sm:py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <SectionHeading
             eyebrow="Our Services"
             title="Fire, Electrical, EHS, Construction HSE & Digital Safety"
             description="A complete service ecosystem covering compliance audits, engineered systems, training, and technology-led risk control."
-            className="mb-12"
+            className="mb-8 sm:mb-12"
           />
         </AnimateIn>
-        <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
           {services.map((service, i) => {
             const Icon = service.icon;
             return (
