@@ -102,34 +102,76 @@ export const navigation = [
 
 export const heroSlides = [
   {
-    title: "Oil & Gas",
+    id: "overview",
+    label: "Overview",
+    eyebrow: "India · Fire · EHS · Digital Safety",
+    title: "360° Fire, EHS & Digital Safety Solutions",
+    description:
+      "Empowering industries with safer, smarter and sustainable workplaces—from fire engineering and compliance audits to ESG and AI safety monitoring.",
+    primaryCta: { label: "Get Free Consultation", href: "/contact" },
+    secondaryCta: { label: "Explore Services", href: "/services" },
+    image:
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80",
+  },
+  {
+    id: "fire-safety",
+    label: "Fire Safety",
+    eyebrow: "Fire Safety Engineering",
+    title: "Fire protection engineered for industrial risk",
+    description:
+      "Fire risk assessment, hydrant & alarm systems, aspirating smoke detection, and Fire NOC support aligned to NBC and local authority requirements.",
+    primaryCta: { label: "Request Fire Audit", href: "/contact" },
+    secondaryCta: {
+      label: "Fire Safety Services",
+      href: "/services/fire-safety-engineering",
+    },
     image:
       "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=2000&q=80",
   },
   {
-    title: "Power Plants",
+    id: "electrical-audits",
+    label: "Compliance",
+    eyebrow: "Electrical & Fire Compliance",
+    title: "Audits that prevent downtime and fire loss",
+    description:
+      "Thermography, electrical safety audits, arc flash studies, and fire compliance reviews that close gaps before they become incidents.",
+    primaryCta: { label: "Book a Compliance Audit", href: "/contact" },
+    secondaryCta: {
+      label: "Audit Services",
+      href: "/services/electrical-fire-compliance-audits",
+    },
     image:
       "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2000&q=80",
   },
   {
-    title: "Metro & Railway",
-    image:
-      "https://images.unsplash.com/photo-1474487548417-781cb71427f3?auto=format&fit=crop&w=2000&q=80",
-  },
-  {
-    title: "Manufacturing",
-    image:
-      "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=2000&q=80",
-  },
-  {
-    title: "Construction",
+    id: "construction-hse",
+    label: "Construction",
+    eyebrow: "Construction HSE",
+    title: "Site safety that keeps projects moving",
+    description:
+      "HSE planning, induction, inspections, and contractor control for metro, infrastructure, and industrial construction sites across India.",
+    primaryCta: { label: "Talk to an HSE Expert", href: "/contact" },
+    secondaryCta: {
+      label: "Construction HSE",
+      href: "/services/construction-hse",
+    },
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80",
   },
   {
-    title: "Fire Protection",
+    id: "digital-ai",
+    label: "Digital Safety",
+    eyebrow: "Digital & AI Safety",
+    title: "Smarter monitoring for safer operations",
+    description:
+      "Digital safety systems and AI-assisted monitoring that help manufacturing, power, and logistics teams spot hazards earlier and act faster.",
+    primaryCta: { label: "See Digital Solutions", href: "/contact" },
+    secondaryCta: {
+      label: "Digital & AI Safety",
+      href: "/services/digital-ai",
+    },
     image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80",
+      "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=2000&q=80",
   },
 ];
 
