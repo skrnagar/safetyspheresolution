@@ -32,6 +32,8 @@ export function Services() {
                       alt={`${service.title} — Safety Sphere Solution`}
                       fill
                       sizes="(max-width:768px) 100vw, 25vw"
+                      quality={65}
+                      loading="lazy"
                       className="object-cover transition duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent" />

@@ -3,7 +3,6 @@ import { faqs } from "@/content/site-content";
 import { AnimateIn } from "@/components/shared/animate-in";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
-import { GsapReveal } from "@/components/shared/gsap-reveal";
 
 export function FaqPreview() {
   return (
@@ -16,27 +15,25 @@ export function FaqPreview() {
             className="mb-10"
           />
         </AnimateIn>
-        <GsapReveal className="space-y-3">
-          {faqs.slice(0, 6).map((faq) => (
-            <details
-              key={faq.question}
-              data-reveal
-              className="group border border-slate-200 bg-white open:shadow-sm"
-            >
-              <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-brand-navy marker:content-none">
-                <span className="flex items-center justify-between gap-4">
-                  {faq.question}
-                  <span className="text-brand-red transition group-open:rotate-45">
-                    +
+        <div className="space-y-3">
+          {faqs.slice(0, 6).map((faq, i) => (
+            <AnimateIn key={faq.question} delay={i * 0.04}>
+              <details className="group border border-slate-200 bg-white open:shadow-sm">
+                <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-brand-navy marker:content-none">
+                  <span className="flex items-center justify-between gap-4">
+                    {faq.question}
+                    <span className="text-brand-red transition group-open:rotate-45">
+                      +
+                    </span>
                   </span>
-                </span>
-              </summary>
-              <p className="border-t border-slate-100 px-5 py-4 text-sm leading-relaxed text-slate-600">
-                {faq.answer}
-              </p>
-            </details>
+                </summary>
+                <p className="border-t border-slate-100 px-5 py-4 text-sm leading-relaxed text-slate-600">
+                  {faq.answer}
+                </p>
+              </details>
+            </AnimateIn>
           ))}
-        </GsapReveal>
+        </div>
         <div className="mt-8">
           <Button asChild variant="outline">
             <Link href="/faq">View all FAQs</Link>

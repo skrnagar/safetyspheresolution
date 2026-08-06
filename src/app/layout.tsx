@@ -11,14 +11,16 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  preload: true,
 });
 
 const fraunces = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"],
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -81,6 +83,12 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <head>
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link
+          rel="preconnect"
+          href="https://images.unsplash.com"
+          crossOrigin="anonymous"
+        />
         <link rel="llms-txt" href="/llms.txt" />
         <link
           rel="alternate"

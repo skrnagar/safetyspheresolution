@@ -37,7 +37,8 @@ export function Hero() {
               src={slide.image}
               alt={`${slide.title} industrial safety environment`}
               fill
-              priority
+              priority={index === 0}
+              quality={70}
               sizes="100vw"
               className="object-cover"
             />
