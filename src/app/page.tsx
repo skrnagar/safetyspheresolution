@@ -3,6 +3,7 @@ import { Cta } from "@/components/home/cta";
 import { Experts } from "@/components/home/experts";
 import { Hero } from "@/components/home/hero";
 import { Industries } from "@/components/home/industries";
+import { Process } from "@/components/home/process";
 import { Projects } from "@/components/home/projects";
 import { Services } from "@/components/home/services";
 import { Stats } from "@/components/home/stats";
@@ -22,13 +23,14 @@ import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: `${siteConfig.name} | Fire Safety, EHS & Digital Safety Consultant India`,
+  title: `${siteConfig.name} | Fire Safety Compliance Audit & EHS Consultant India`,
   description: siteConfig.description,
   path: "/",
   keywords: [
+    "Fire Safety Compliance Audit",
+    "Electrical Safety Audit India",
+    "Construction HSE Management",
     "Fire Safety Consultant Nagpur",
-    "Fire Safety Consultant Raipur",
-    "Industrial EHS Consulting India",
   ],
 });
 
@@ -48,6 +50,7 @@ export default function HomePage() {
       <Values />
       <WhyChoose />
       <Services />
+      <Process />
       <Industries />
       <Projects />
       <Experts />
@@ -58,3 +61,4 @@ export default function HomePage() {
     </>
   );
 }
+

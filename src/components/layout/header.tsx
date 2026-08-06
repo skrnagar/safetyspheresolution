@@ -83,14 +83,14 @@ export function Header() {
                   <div
                     className={cn(
                       "absolute left-0 top-full pt-2",
-                      isMega ? "w-[34rem]" : "w-64"
+                      isMega ? "w-[38rem]" : "w-64"
                     )}
                   >
                     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
                       <div
                         className={cn(
                           "grid gap-1",
-                          isMega ? "grid-cols-2" : "grid-cols-1"
+                          isMega ? "grid-cols-2 max-h-[28rem] overflow-y-auto" : "grid-cols-1"
                         )}
                       >
                         {item.children.map((child) => (

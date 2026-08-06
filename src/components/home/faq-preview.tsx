@@ -17,7 +17,7 @@ export function FaqPreview() {
           />
         </AnimateIn>
         <GsapReveal className="space-y-3">
-          {faqs.slice(0, 4).map((faq) => (
+          {faqs.slice(0, 6).map((faq) => (
             <details
               key={faq.question}
               data-reveal

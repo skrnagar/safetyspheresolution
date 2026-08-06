@@ -4,15 +4,18 @@ import {
   Brain,
   Building2,
   CheckCircle2,
+  ClipboardCheck,
   Clock,
   Factory,
   Flame,
   Handshake,
+  HardHat,
   HeartHandshake,
   Leaf,
   Lightbulb,
   Recycle,
   Scale,
+  Search,
   Shield,
   ShieldCheck,
   Target,
@@ -20,6 +23,7 @@ import {
   Wallet,
   Workflow,
   Zap,
+  Bolt,
 } from "lucide-react";
 
 export const navigation = [
@@ -31,6 +35,7 @@ export const navigation = [
       { label: "Vision & Mission", href: "/about#vision" },
       { label: "Core Values", href: "/about#values" },
       { label: "Our Experts", href: "/about#experts" },
+      { label: "How We Work", href: "/#process" },
     ],
   },
   {
@@ -41,12 +46,22 @@ export const navigation = [
       {
         label: "Fire Safety Engineering",
         href: "/services/fire-safety-engineering",
-        description: "Audits, NOC, design, installation & AMC",
+        description: "NOC, detection, suppression, design & AMC",
+      },
+      {
+        label: "Electrical & Fire Compliance Audits",
+        href: "/services/electrical-fire-compliance-audits",
+        description: "Electrical, fire, thermography & arc flash",
       },
       {
         label: "EHS Engineering & Consulting",
         href: "/services/ehs-engineering",
         description: "Compliance, HAZOP, HIRA, ESG & more",
+      },
+      {
+        label: "Construction HSE Management",
+        href: "/services/construction-hse",
+        description: "Site HSE plans, contractor control & audits",
       },
       {
         label: "Professional EHS Training",
@@ -61,7 +76,12 @@ export const navigation = [
       {
         label: "Safety Consultancy & Audits",
         href: "/services/safety-consultancy",
-        description: "ISO, electrical, contractor safety",
+        description: "ISO, TVRA-aligned, life safety audits",
+      },
+      {
+        label: "Physical Security & Life Safety",
+        href: "/services/physical-security-life-safety",
+        description: "Access, CCTV, fire-life safety & BCP",
       },
     ],
   },
@@ -173,28 +193,58 @@ export const services = [
     slug: "fire-safety-engineering",
     title: "Fire Safety Engineering",
     short:
-      "End-to-end fire protection engineering, systems, NOC support, and lifecycle maintenance.",
+      "End-to-end fire protection engineering—detection, suppression, NOC support, compliance audits, and lifecycle AMC.",
     icon: Flame,
     image:
       "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1400&q=80",
     items: [
-      "Fire Safety Audits",
+      "Fire Safety Compliance Audit",
       "Fire Risk Assessment",
       "Fire Load Calculation",
-      "Fire NOC",
-      "Fire Hydrant Systems",
+      "Fire NOC Support",
+      "Addressable Fire Alarm Systems",
+      "Conventional Fire Alarm Systems",
+      "Aspirating Smoke Detection (VESDA/ASD)",
+      "Smoke, Heat & Multi-Criteria Sensors",
+      "Fire Hydrant & Hose Reel Systems",
       "Sprinkler Systems",
-      "Fire Alarm Systems",
-      "VESDA",
       "Foam Systems",
-      "CO₂ Flooding",
+      "CO₂ & Clean Agent Flooding",
       "Water Mist Systems",
-      "Fire Extinguishers",
-      "Fire AMC",
-      "Fire System Design",
-      "Installation",
-      "Testing",
-      "Commissioning",
+      "Public Address & Notification Appliances",
+      "Fire Extinguishers Supply & Refilling",
+      "Fire System Design (NBC / IS / NFPA)",
+      "Installation, Testing & Commissioning",
+      "Fire AMC & Breakdown Support",
+      "System Upgrades & Expansions",
+      "Remote Monitoring Ready Architecture",
+    ],
+  },
+  {
+    slug: "electrical-fire-compliance-audits",
+    title: "Electrical & Fire Compliance Audits",
+    short:
+      "Detailed electrical and fire safety compliance audits with thermography, arc flash, power quality, and actionable rectification guidance.",
+    icon: Bolt,
+    image:
+      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1400&q=80",
+    items: [
+      "Electrical Safety Audit",
+      "Fire Safety Compliance Audit",
+      "Thermography / Infrared Audit",
+      "Arc Flash Study",
+      "Power Quality Study",
+      "Electrical Load Study",
+      "Lightning Protection Study",
+      "Fire Load Study",
+      "Panel & Cable Condition Assessment",
+      "Earthing System Verification",
+      "CEA / IS Compliance Review",
+      "Live-Line Assessment Approach",
+      "Risk Prioritization & Heat Maps",
+      "Post-Audit Rectification BOQ",
+      "Vendor Coordination Support",
+      "Re-Audit & Closure Verification",
     ],
   },
   {
@@ -207,19 +257,50 @@ export const services = [
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1400&q=80",
     items: [
       "Environmental Compliance",
-      "EIA",
-      "HAZOP",
-      "COSHH",
-      "ESG",
+      "Environment Impact Assessment (EIA)",
+      "HAZOP Studies",
+      "COSHH Assessment",
+      "ESG Assessment & Reporting Support",
       "Safety Audits",
       "Fire Audits",
-      "LOTO",
-      "Machine Guarding",
-      "Emergency Planning",
-      "Chemical Safety",
-      "Accident Investigation",
+      "LOTO Assessment & Implementation",
+      "Machine Guarding Solutions",
+      "Emergency Preparedness Plans",
+      "Chemical Safety Management",
+      "Accident Investigation & RCA",
       "HIRA",
       "JSA",
+      "Onsite / Offsite Emergency Plans",
+      "Evacuation Layouts",
+      "Hazardous Substances Register",
+      "Waste & Water Management Guidance",
+    ],
+  },
+  {
+    slug: "construction-hse",
+    title: "Construction HSE Management",
+    short:
+      "Construction-site HSE systems, documentation, contractor control, and continuous compliance support through project lifecycle.",
+    icon: HardHat,
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80",
+    items: [
+      "Construction HSE Plan & Manual",
+      "Site HSE Team Setup Support",
+      "Legal Compliance Tracking",
+      "Contractor Pre-Qualification",
+      "Contractor HSE Audits",
+      "Permit to Work Systems",
+      "Scaffold & Crane Coordination Support",
+      "Working at Height Controls",
+      "Fire Prevention Concepts for Sites",
+      "Inspection & Toolbox Talk Schedules",
+      "Training & Induction Documents",
+      "Incident Reporting Systems",
+      "Hazardous Materials Controls",
+      "Environmental Site Controls",
+      "Permit & Approval Coordination",
+      "Post-Project HSE Documentation",
     ],
   },
   {
@@ -231,64 +312,138 @@ export const services = [
     image:
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=80",
     items: [
-      "Fire Fighting",
-      "First Aid",
-      "CPR",
+      "Fire Fighting & Mock Drills",
+      "First Aid & CPR",
       "Working at Height",
-      "Electrical Safety",
-      "LOTO",
-      "HIRA",
+      "Electrical Safety Training",
+      "LOTO Training",
+      "HIRA Training",
       "Crane Safety",
-      "Rigging",
-      "Scaffold",
-      "Chemical Safety",
+      "Rigging & Lifting",
+      "Scaffold Safety",
+      "Chemical Handling & MSDS",
       "Confined Space",
-      "Leadership",
-      "BBS",
+      "Leadership Safety Programs",
+      "Behavior-Based Safety (BBS)",
       "Warehouse Safety",
-      "Road Safety",
+      "Road Safety & Driving Behavior",
+      "Construction Site Safety",
+      "Maintenance & PPM Safety",
+      "Emergency Response & Rescue",
     ],
   },
   {
     slug: "digital-ai",
     title: "Digital Automation & AI",
     short:
-      "Digital permit systems, AI monitoring, IoT detection, and ESG intelligence platforms.",
+      "Digital permit systems, AI monitoring, IoT detection, remote dashboards, and ESG intelligence platforms.",
     icon: Brain,
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80",
     items: [
       "AI Safety Monitoring",
-      "IoT Safety",
-      "Digital Permit to Work",
+      "AI Camera Analytics",
+      "IoT / VESDA Detection Integration",
+      "Digital Permit to Work (e-PTW)",
       "Digital LOTO",
-      "Mobile Apps",
+      "Mobile Safety Apps",
       "Safety Dashboards",
-      "Safety Software",
-      "AI Cameras",
-      "Digital Signage",
-      "ESG Intelligence",
+      "Safety Management Software",
+      "Remote Alarm Monitoring Readiness",
+      "Digital Signage & Safety Boards",
+      "ESG Data Intelligence",
+      "AR/VR Safety Simulation Support",
+      "Custom Safety Videos",
+      "Control Room Integration Support",
     ],
   },
   {
     slug: "safety-consultancy",
     title: "Safety Consultancy & Audits",
     short:
-      "Independent audits, ISO consulting, documentation, and emergency readiness programs.",
+      "Independent audits, ISO consulting, documentation, TVRA-aligned assessments, and emergency readiness programs.",
     icon: Building2,
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80",
     items: [
-      "Fire Audit",
-      "Electrical Audit",
+      "Fire Safety Compliance Audit",
+      "Electrical Safety Audit",
       "Machine Guarding Audit",
-      "ISO Consulting",
-      "Carbon Footprint",
-      "Contractor Safety",
-      "Safety Documentation",
-      "Emergency Planning",
       "General Safety Audit",
+      "ISO 45001 / 14001 Consulting",
+      "Carbon Footprint Assessment",
+      "Contractor Safety Management",
+      "Safety Documentation & SOPs",
+      "Emergency Action Planning",
+      "Threat Vulnerability Risk Assessment Support",
+      "Hotel / Campus / Facility Safety Audit",
+      "Data Centre Safety Review",
+      "Business Continuity Planning Support",
+      "Crisis Management Tabletop Drills",
     ],
+  },
+  {
+    slug: "physical-security-life-safety",
+    title: "Physical Security & Life Safety",
+    short:
+      "Integrated physical security and fire-life safety assessments covering access control, surveillance, evacuation, and crisis readiness.",
+    icon: ShieldCheck,
+    image:
+      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1400&q=80",
+    items: [
+      "Physical Security Risk Assessment",
+      "Access Control Gap Analysis",
+      "CCTV & Surveillance Blind Spot Review",
+      "Fire & Life Safety Gap Assessment",
+      "Evacuation Readiness Review",
+      "Emergency Preparedness Audit",
+      "Site Security Plan Support",
+      "SOP Development for Security Operations",
+      "Intrusion Detection Design Inputs",
+      "Control Room Process Review",
+      "Event & Mass Gathering Safety Support",
+      "Business Continuity Framework Support",
+      "Crisis Simulation Drills",
+      "Leadership Security Debrief Reports",
+    ],
+  },
+];
+
+export const processSteps = [
+  {
+    step: "01",
+    title: "Discover & Scope",
+    description:
+      "Understand your facility, risk profile, compliance goals, and operational constraints.",
+    icon: Search,
+  },
+  {
+    step: "02",
+    title: "Assess On Ground",
+    description:
+      "Conduct structured audits, walkdowns, instrument checks, and stakeholder interviews.",
+    icon: ClipboardCheck,
+  },
+  {
+    step: "03",
+    title: "Prioritize Risks",
+    description:
+      "Rate findings by likelihood and business impact with clear heat maps and action order.",
+    icon: Target,
+  },
+  {
+    step: "04",
+    title: "Design & Implement",
+    description:
+      "Deliver engineering designs, system upgrades, training, digital tools, and documentation.",
+    icon: Workflow,
+  },
+  {
+    step: "05",
+    title: "Verify & Sustain",
+    description:
+      "Support commissioning, AMC, re-audits, and continuous improvement for lasting compliance.",
+    icon: CheckCircle2,
   },
 ];
 
@@ -370,9 +525,29 @@ export const faqs = [
       "Yes. We support Fire NOC documentation, system readiness, liaison, and compliance alignment with applicable codes and authority requirements.",
   },
   {
+    question: "What is included in a Fire Safety Compliance Audit?",
+    answer:
+      "We assess detection and suppression readiness, evacuation arrangements, documentation gaps, code compliance (NBC/IS/NFPA aligned), and provide a prioritized action plan with rectification guidance.",
+  },
+  {
+    question: "Is shutdown required for electrical or fire audits?",
+    answer:
+      "Wherever feasible, we plan assessments to minimize operational disruption. Many checks can be performed with controlled live-line methods; critical interventions are scheduled around your production windows.",
+  },
+  {
     question: "Can you deliver end-to-end fire protection systems?",
     answer:
-      "We cover design, engineering, supply, installation, testing, commissioning, and AMC for hydrant, sprinkler, alarm, foam, CO₂, water mist, and related systems.",
+      "We cover design, engineering, supply, installation, testing, commissioning, and AMC for hydrant, sprinkler, alarm, aspirating detection, foam, CO₂, water mist, and related systems.",
+  },
+  {
+    question: "Do you provide construction site HSE management?",
+    answer:
+      "Yes. We support HSE plans, contractor controls, site induction documents, permits, inspections, fire prevention concepts, and continuous compliance through the construction lifecycle.",
+  },
+  {
+    question: "Do you offer physical security and life-safety assessments?",
+    answer:
+      "Yes. We review access control, CCTV blind spots, fire-life safety gaps, emergency preparedness, and crisis readiness—then deliver prioritized recommendations for leadership.",
   },
   {
     question: "Do you provide on-site industrial safety training?",
@@ -382,7 +557,7 @@ export const faqs = [
   {
     question: "What digital safety solutions do you offer?",
     answer:
-      "We implement AI safety monitoring, IoT detection, digital permit-to-work, digital LOTO, mobile apps, dashboards, and ESG intelligence tools.",
+      "We implement AI safety monitoring, IoT detection, digital permit-to-work, digital LOTO, mobile apps, dashboards, remote monitoring readiness, and ESG intelligence tools.",
   },
   {
     question: "Which locations do you operate from?",
@@ -402,6 +577,15 @@ export const blogPosts = [
     readTime: "6 min",
   },
   {
+    slug: "fire-safety-compliance-audit-guide",
+    title: "Fire Safety Compliance Audit: What Industrial Sites Must Check",
+    excerpt:
+      "How a structured compliance audit reduces fire risk, closes documentation gaps, and prepares facilities for inspections.",
+    category: "Fire Safety",
+    date: "2026-04-02",
+    readTime: "7 min",
+  },
+  {
     slug: "loto-implementation-best-practices",
     title: "LOTO Implementation Best Practices for Process Plants",
     excerpt:
@@ -409,6 +593,24 @@ export const blogPosts = [
     category: "EHS",
     date: "2026-02-20",
     readTime: "7 min",
+  },
+  {
+    slug: "electrical-thermography-audit-plants",
+    title: "Why Thermography Should Be Part of Every Electrical Safety Audit",
+    excerpt:
+      "Infrared scanning helps catch hotspots early—before failures become fires, downtime, or compliance findings.",
+    category: "Electrical Safety",
+    date: "2026-03-28",
+    readTime: "5 min",
+  },
+  {
+    slug: "construction-hse-management-essentials",
+    title: "Construction HSE Management Essentials for Safer Sites",
+    excerpt:
+      "HSE plans, contractor controls, and inspection rhythms that keep projects safe without slowing delivery.",
+    category: "Construction HSE",
+    date: "2026-02-05",
+    readTime: "6 min",
   },
   {
     slug: "ai-safety-monitoring-factories",
@@ -435,6 +637,12 @@ export const careers = [
     summary: "Deliver safety audits, HIRA/JSA programs, and compliance consulting.",
   },
   {
+    title: "Electrical Safety Auditor",
+    location: "Nagpur / Pan-India",
+    type: "Full-time",
+    summary: "Execute electrical audits, thermography reviews, and compliance reporting.",
+  },
+  {
     title: "Digital Safety Specialist",
     location: "Hybrid",
     type: "Full-time",
@@ -450,7 +658,8 @@ export const downloads = [
   },
   {
     title: "Service Brochure",
-    description: "Fire, EHS, training, ESG, and digital safety service summary.",
+    description:
+      "Fire, electrical audits, EHS, construction HSE, training, ESG, and digital safety summary.",
     file: "/downloads/service-brochure.pdf",
   },
 ];
@@ -462,4 +671,4 @@ export const mission =
   "Empower industries with knowledge, technology, engineering expertise and integrated services to create safer workplaces.";
 
 export const aboutIntro =
-  "Safety Sphere Solution is a trusted industrial safety consulting company delivering innovation-led, integrated solutions across Fire Protection Engineering, Environment, Health & Safety, ESG Consulting, Digital Safety, AI Safety Monitoring, Safety Trainings, and Compliance Consulting.";
+  "Safety Sphere Solution is a trusted industrial safety consulting company delivering innovation-led, integrated solutions across Fire Protection Engineering, Electrical & Fire Compliance Audits, Environment, Health & Safety, Construction HSE, ESG Consulting, Physical Security & Life Safety, Digital Safety, AI Safety Monitoring, Safety Trainings, and Compliance Consulting.";
