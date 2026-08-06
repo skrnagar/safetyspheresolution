@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { LiveChat } from "@/components/layout/live-chat";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { OrganizationJsonLd } from "@/components/shared/json-ld";
 import { siteConfig } from "@/lib/site";
@@ -106,7 +105,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
-        <LiveChat />
       </body>
     </html>
   );
