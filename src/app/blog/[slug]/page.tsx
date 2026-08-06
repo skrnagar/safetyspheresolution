@@ -34,17 +34,17 @@ export default async function BlogPostPage({ params }: Props) {
         description={`${post.date} · ${post.readTime} read`}
       />
       <article className="py-16 md:py-20">
-        <div className="prose prose-slate mx-auto max-w-3xl px-4 dark:prose-invert sm:px-6">
-          <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200">
+        <div className="prose prose-slate mx-auto max-w-3xl px-4 sm:px-6">
+          <p className="text-lg leading-relaxed text-slate-700">
             {post.excerpt}
           </p>
-          <p className="mt-6 leading-relaxed text-slate-600 dark:text-slate-300">
+          <p className="mt-6 leading-relaxed text-slate-600">
             Safety Sphere Solution supports organizations with practical Fire
             Safety, EHS, ESG, and Digital Safety programs. This article is part
             of our knowledge series for industrial leaders seeking stronger
             compliance, safer operations, and technology-enabled risk control.
           </p>
-          <p className="mt-4 leading-relaxed text-slate-600 dark:text-slate-300">
+          <p className="mt-4 leading-relaxed text-slate-600">
             For site-specific guidance—Fire NOC readiness, LOTO implementation,
             safety audits, or AI monitoring—speak with our consultants for a
             free consultation.

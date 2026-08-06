@@ -10,7 +10,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 export function About() {
   return (
     <section id="about" className="relative py-20 md:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(11,31,69,0.06),transparent_40%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.04),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(11,31,69,0.06),transparent_40%)]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
         <AnimateIn>
           <div className="relative overflow-hidden rounded-2xl">
@@ -38,13 +38,13 @@ export function About() {
             {aboutPoints.map((point) => (
               <div
                 key={point}
-                className="border-l-2 border-brand-red/80 pl-3 text-sm font-medium text-brand-navy dark:text-white"
+                className="border-l-2 border-brand-red/80 pl-3 text-sm font-medium text-brand-navy"
               >
                 {point}
               </div>
             ))}
           </div>
-          <p className="mt-8 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          <p className="mt-8 text-sm leading-relaxed text-slate-600">
             Industries served include{" "}
             {industriesServed.slice(0, 12).join(", ")}, and more.
           </p>

@@ -9,20 +9,20 @@ type PageHeroProps = {
 export function PageHero({ eyebrow, title, description }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-brand-navy py-16 text-white md:py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(230,57,70,0.25),transparent_40%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(230,57,70,0.28),transparent_42%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),transparent_55%)]" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           {eyebrow ? (
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand-red">
+            <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-brand-red">
               {eyebrow}
             </p>
           ) : null}
-          <h1 className="max-w-4xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
+          <h1 className="max-w-4xl font-display text-4xl font-semibold tracking-tight md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
             {title}
           </h1>
           {description ? (
-            <p className="mt-4 max-w-2xl text-base text-white/75 md:text-lg">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
               {description}
             </p>
           ) : null}

@@ -68,10 +68,10 @@ export function SearchDialog() {
           onClick={() => setOpen(false)}
         >
           <div
-            className="w-full max-w-xl overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl dark:border-white/10 dark:bg-[#0f1c35]"
+            className="w-full max-w-xl overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center gap-2 border-b border-slate-100 p-3 dark:border-white/10">
+            <div className="flex items-center gap-2 border-b border-slate-100 p-3">
               <Search className="ml-1 h-4 w-4 text-slate-400" />
               <Input
                 autoFocus
@@ -100,9 +100,9 @@ export function SearchDialog() {
                     <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm hover:bg-slate-50 dark:hover:bg-white/5"
+                      className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm hover:bg-slate-50"
                     >
-                      <span className="font-medium text-brand-navy dark:text-white">
+                      <span className="font-medium text-brand-navy">
                         {item.title}
                       </span>
                       <span className="text-xs uppercase tracking-wide text-slate-400">

@@ -18,14 +18,14 @@ export function ContactPreview() {
           <div className="mt-8 space-y-4 text-sm">
             <a
               href={formatPhoneHref(siteConfig.phone)}
-              className="flex items-center gap-3 text-brand-navy hover:text-brand-red dark:text-white"
+              className="flex items-center gap-3 text-brand-navy hover:text-brand-red"
             >
               <Phone className="h-4 w-4 text-brand-red" />
               {siteConfig.phone}
             </a>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="flex items-center gap-3 text-brand-navy hover:text-brand-red dark:text-white"
+              className="flex items-center gap-3 text-brand-navy hover:text-brand-red"
             >
               <Mail className="h-4 w-4 text-brand-red" />
               {siteConfig.email}
@@ -33,14 +33,14 @@ export function ContactPreview() {
             {siteConfig.locations.map((loc) => (
               <p
                 key={loc.short}
-                className="flex items-center gap-3 text-slate-600 dark:text-slate-300"
+                className="flex items-center gap-3 text-slate-600"
               >
                 <MapPin className="h-4 w-4 text-brand-red" />
                 {loc.short}
               </p>
             ))}
           </div>
-          <div className="mt-8 overflow-hidden border border-slate-200 dark:border-white/10">
+          <div className="mt-8 overflow-hidden border border-slate-200">
             <iframe
               title="Safety Sphere Solution locations map"
               src="https://www.google.com/maps?q=Nagpur+Maharashtra&output=embed"
@@ -51,11 +51,11 @@ export function ContactPreview() {
           </div>
         </AnimateIn>
         <AnimateIn delay={0.08}>
-          <div className="border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/5 md:p-8">
-            <h3 className="font-display text-2xl font-semibold text-brand-navy dark:text-white">
+          <div className="border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+            <h3 className="font-display text-2xl font-semibold text-brand-navy">
               Request a free consultation
             </h3>
-            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            <p className="mt-2 text-sm text-slate-600">
               Share your requirement and our consultants will respond promptly.
             </p>
             <div className="mt-6">

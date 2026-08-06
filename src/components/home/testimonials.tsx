@@ -37,16 +37,16 @@ export function Testimonials() {
                 key={item.quote}
                 className="min-w-0 flex-[0_0_100%] pr-4 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
               >
-                <div className="h-full border border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-white/5">
+                <div className="h-full border border-slate-200 bg-white p-7">
                   <div className="flex gap-1 text-brand-red" aria-label="5 star rating">
                     {Array.from({ length: item.rating }).map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
-                  <p className="mt-5 font-display text-xl leading-snug text-brand-navy dark:text-white">
+                  <p className="mt-5 font-display text-xl leading-snug text-brand-navy">
                     “{item.quote}”
                   </p>
-                  <p className="mt-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
+                  <p className="mt-6 text-sm font-semibold text-slate-700">
                     {item.author}
                   </p>
                   <p className="text-xs text-slate-500">{item.company}</p>

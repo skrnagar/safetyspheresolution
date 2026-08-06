@@ -23,17 +23,17 @@ export default function CareersPage() {
           {careers.map((role) => (
             <article
               key={role.title}
-              className="border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-white/5 md:p-8"
+              className="border border-slate-200 bg-white p-6 md:p-8"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <h2 className="font-display text-2xl font-semibold text-brand-navy dark:text-white">
+                  <h2 className="font-display text-2xl font-semibold text-brand-navy">
                     {role.title}
                   </h2>
                   <p className="mt-2 text-sm text-slate-500">
                     {role.location} · {role.type}
                   </p>
-                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600">
                     {role.summary}
                   </p>
                 </div>

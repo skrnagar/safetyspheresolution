@@ -7,7 +7,7 @@ import { GsapReveal } from "@/components/shared/gsap-reveal";
 
 export function FaqPreview() {
   return (
-    <section className="bg-slate-50 py-20 dark:bg-[#09182f] md:py-24">
+    <section className="bg-slate-50 py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <SectionHeading
@@ -21,9 +21,9 @@ export function FaqPreview() {
             <details
               key={faq.question}
               data-reveal
-              className="group border border-slate-200 bg-white open:shadow-sm dark:border-white/10 dark:bg-white/5"
+              className="group border border-slate-200 bg-white open:shadow-sm"
             >
-              <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-brand-navy marker:content-none dark:text-white">
+              <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-brand-navy marker:content-none">
                 <span className="flex items-center justify-between gap-4">
                   {faq.question}
                   <span className="text-brand-red transition group-open:rotate-45">
@@ -31,7 +31,7 @@ export function FaqPreview() {
                   </span>
                 </span>
               </summary>
-              <p className="border-t border-slate-100 px-5 py-4 text-sm leading-relaxed text-slate-600 dark:border-white/10 dark:text-slate-300">
+              <p className="border-t border-slate-100 px-5 py-4 text-sm leading-relaxed text-slate-600">
                 {faq.answer}
               </p>
             </details>

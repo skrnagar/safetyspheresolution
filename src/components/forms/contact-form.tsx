@@ -103,7 +103,7 @@ export function ContactForm() {
         </label>
         <select
           id="service"
-          className="flex h-11 w-full rounded-md border border-slate-200 bg-white px-3.5 text-sm dark:border-white/15 dark:bg-white/5"
+          className="flex h-11 w-full rounded-md border border-slate-200 bg-white px-3.5 text-sm"
           {...register("service")}
         >
           <option>Fire Safety Engineering</option>

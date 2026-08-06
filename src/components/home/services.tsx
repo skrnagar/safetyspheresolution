@@ -29,7 +29,7 @@ export function Services() {
               >
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group relative block h-full overflow-hidden border border-slate-200 bg-white transition hover:shadow-xl dark:border-white/10 dark:bg-white/5"
+                  className="group relative block h-full overflow-hidden border border-slate-200 bg-white transition hover:shadow-xl"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
@@ -46,19 +46,19 @@ export function Services() {
                   </div>
                   <div className="p-6">
                     <div className="flex items-start justify-between gap-3">
-                      <h3 className="font-display text-xl font-semibold text-brand-navy dark:text-white">
+                      <h3 className="font-display text-xl font-semibold text-brand-navy">
                         {service.title}
                       </h3>
                       <ArrowUpRight className="mt-1 h-4 w-4 text-brand-red transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </div>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">
                       {service.short}
                     </p>
                     <ul className="mt-4 flex flex-wrap gap-2">
                       {service.items.slice(0, 4).map((item) => (
                         <li
                           key={item}
-                          className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-600 dark:bg-white/10 dark:text-slate-300"
+                          className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-600"
                         >
                           {item}
                         </li>

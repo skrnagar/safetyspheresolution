@@ -12,9 +12,9 @@ const buttonVariants = cva(
         secondary:
           "bg-brand-navy text-white hover:bg-[#0e2a5c] active:translate-y-px",
         outline:
-          "border border-brand-navy/20 bg-white text-brand-navy hover:border-brand-navy/40 hover:bg-slate-50 dark:bg-transparent dark:text-white dark:border-white/30 dark:hover:bg-white/10",
+          "border border-brand-navy/20 bg-white text-brand-navy hover:border-brand-navy/40 hover:bg-slate-50",
         ghost:
-          "text-brand-navy hover:bg-slate-100 dark:text-white dark:hover:bg-white/10",
+          "text-brand-navy hover:bg-slate-100",
         light:
           "border border-white/50 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-brand-navy",
       },

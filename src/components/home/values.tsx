@@ -20,14 +20,14 @@ export function Values() {
             const Icon = value.icon;
             return (
               <AnimateIn key={value.title} delay={i * 0.04}>
-                <article className="group h-full border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-brand-navy/20 hover:shadow-lg dark:border-white/10 dark:bg-white/5">
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition group-hover:bg-brand-red group-hover:text-white dark:bg-white/10 dark:text-white">
+                <article className="group h-full border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-brand-navy/20 hover:shadow-lg">
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition group-hover:bg-brand-red group-hover:text-white">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-semibold text-brand-navy dark:text-white">
+                  <h3 className="font-semibold text-brand-navy">
                     {value.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
                     {value.description}
                   </p>
                 </article>

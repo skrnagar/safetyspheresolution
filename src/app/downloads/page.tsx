@@ -23,13 +23,13 @@ export default function DownloadsPage() {
           {downloads.map((item) => (
             <article
               key={item.title}
-              className="border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-white/5"
+              className="border border-slate-200 bg-white p-6"
             >
               <FileDown className="h-6 w-6 text-brand-red" />
-              <h2 className="mt-4 font-display text-2xl font-semibold text-brand-navy dark:text-white">
+              <h2 className="mt-4 font-display text-2xl font-semibold text-brand-navy">
                 {item.title}
               </h2>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              <p className="mt-2 text-sm text-slate-600">
                 {item.description}
               </p>
               <Button asChild className="mt-6">

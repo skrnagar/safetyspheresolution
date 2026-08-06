@@ -22,9 +22,9 @@ export default function FaqPage() {
           {faqs.map((faq) => (
             <details
               key={faq.question}
-              className="group border border-slate-200 bg-white open:shadow-sm dark:border-white/10 dark:bg-white/5"
+              className="group border border-slate-200 bg-white open:shadow-sm"
             >
-              <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-brand-navy dark:text-white">
+              <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-brand-navy">
                 <span className="flex items-center justify-between gap-4">
                   {faq.question}
                   <span className="text-brand-red transition group-open:rotate-45">
@@ -32,7 +32,7 @@ export default function FaqPage() {
                   </span>
                 </span>
               </summary>
-              <p className="border-t border-slate-100 px-5 py-4 text-sm leading-relaxed text-slate-600 dark:border-white/10 dark:text-slate-300">
+              <p className="border-t border-slate-100 px-5 py-4 text-sm leading-relaxed text-slate-600">
                 {faq.answer}
               </p>
             </details>

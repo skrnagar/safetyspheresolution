@@ -28,7 +28,7 @@ export function SectionHeading({
       {eyebrow ? (
         <p
           className={cn(
-            "mb-3 text-xs font-semibold uppercase tracking-[0.22em]",
+            "mb-3 text-[11px] font-bold uppercase tracking-[0.24em]",
             light ? "text-brand-red" : "text-brand-red"
           )}
         >
@@ -37,8 +37,8 @@ export function SectionHeading({
       ) : null}
       <h2
         className={cn(
-          "font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-[2.75rem] lg:leading-[1.15]",
-          light ? "text-white" : "text-brand-navy dark:text-white"
+          "font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-[2.75rem] lg:leading-[1.12]",
+          light ? "text-white" : "text-brand-navy"
         )}
       >
         {title}
@@ -47,7 +47,7 @@ export function SectionHeading({
         <p
           className={cn(
             "mt-4 text-base leading-relaxed md:text-lg",
-            light ? "text-white/75" : "text-slate-600 dark:text-slate-300"
+            light ? "text-white/75" : "text-slate-600"
           )}
         >
           {description}

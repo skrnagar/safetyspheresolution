@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
-import { Outfit, Source_Serif_4 } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { LiveChat } from "@/components/layout/live-chat";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
-import { ThemeProvider } from "@/components/providers/theme-provider";
 import { OrganizationJsonLd } from "@/components/shared/json-ld";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const outfit = Outfit({
+const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const sourceSerif = Source_Serif_4({
+const fraunces = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -58,26 +59,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
-        className={`${outfit.variable} ${sourceSerif.variable} flex min-h-full flex-col bg-background font-sans text-foreground antialiased`}
+        className={`${plusJakarta.variable} ${fraunces.variable} flex min-h-full flex-col bg-background font-sans text-foreground antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <OrganizationJsonLd />
-          <a
-            href="#main"
-            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-brand-navy"
-          >
-            Skip to content
-          </a>
-          <Header />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <Footer />
-          <WhatsAppButton />
-          <LiveChat />
-        </ThemeProvider>
+        <OrganizationJsonLd />
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-brand-navy"
+        >
+          Skip to content
+        </a>
+        <Header />
+        <main id="main" className="flex-1">
+          {children}
+        </main>
+        <Footer />
+        <WhatsAppButton />
+        <LiveChat />
       </body>
     </html>
   );

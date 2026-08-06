@@ -36,9 +36,9 @@ export function Projects() {
             {[...projects, ...projects].map((project, i) => (
               <div
                 key={`${project.name}-${i}`}
-                className="min-w-[220px] flex-[0_0_auto] border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-white/5"
+                className="min-w-[220px] flex-[0_0_auto] border border-slate-200 bg-white p-6"
               >
-                <p className="font-display text-2xl font-semibold text-brand-navy dark:text-white">
+                <p className="font-display text-2xl font-semibold text-brand-navy">
                   {project.name}
                 </p>
                 <p className="mt-2 text-sm text-slate-500">{project.sector}</p>

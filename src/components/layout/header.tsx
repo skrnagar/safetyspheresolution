@@ -9,7 +9,6 @@ import { siteConfig } from "@/lib/site";
 import { cn, formatPhoneHref } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { SearchDialog } from "@/components/layout/search-dialog";
-import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { BrandLogo } from "@/components/shared/brand-logo";
 
 export function Header() {
@@ -35,13 +34,13 @@ export function Header() {
       className={cn(
         "sticky top-0 z-50 border-b transition-all",
         scrolled
-          ? "border-slate-200/80 bg-white/90 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1f45]/90"
-          : "border-transparent bg-white/80 backdrop-blur-md dark:bg-[#0b1f45]/70"
+          ? "border-slate-200/80 bg-white/90 shadow-sm backdrop-blur-xl"
+          : "border-transparent bg-white/80 backdrop-blur-md"
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
         <Link href="/" className="group min-w-0 shrink-0" aria-label="Safety Sphere Solution home">
-          <BrandLogo priority className="dark:brightness-110" />
+          <BrandLogo priority className="" />
         </Link>
 
         <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
@@ -54,7 +53,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand-navy dark:text-slate-200 dark:hover:bg-white/10 dark:hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand-navy"
                 >
                   {item.label}
                 </Link>
@@ -70,7 +69,7 @@ export function Header() {
               >
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand-navy dark:text-slate-200 dark:hover:bg-white/10"
+                  className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand-navy"
                   aria-expanded={openMenu === item.label}
                   onClick={() =>
                     setOpenMenu((v) => (v === item.label ? null : item.label))
@@ -87,7 +86,7 @@ export function Header() {
                       isMega ? "w-[34rem]" : "w-64"
                     )}
                   >
-                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-3 shadow-xl dark:border-white/10 dark:bg-[#102447]">
+                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
                       <div
                         className={cn(
                           "grid gap-1",
@@ -98,13 +97,13 @@ export function Header() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="rounded-lg px-3 py-2.5 transition hover:bg-slate-50 dark:hover:bg-white/5"
+                            className="rounded-lg px-3 py-2.5 transition hover:bg-slate-50"
                           >
-                            <span className="block text-sm font-semibold text-brand-navy dark:text-white">
+                            <span className="block text-sm font-semibold text-brand-navy">
                               {child.label}
                             </span>
                             {"description" in child && child.description ? (
-                              <span className="mt-0.5 block text-xs text-slate-500 dark:text-slate-300">
+                              <span className="mt-0.5 block text-xs text-slate-500">
                                 {child.description}
                               </span>
                             ) : null}
@@ -121,10 +120,9 @@ export function Header() {
 
         <div className="flex items-center gap-1 sm:gap-2">
           <SearchDialog />
-          <ThemeToggle />
           <a
             href={formatPhoneHref(siteConfig.phone)}
-            className="hidden items-center gap-2 rounded-md px-2 py-2 text-sm font-medium text-brand-navy hover:bg-slate-100 dark:text-white dark:hover:bg-white/10 lg:inline-flex"
+            className="hidden items-center gap-2 rounded-md px-2 py-2 text-sm font-medium text-brand-navy hover:bg-slate-100 lg:inline-flex"
           >
             <Phone className="h-4 w-4 text-brand-red" />
             {siteConfig.phone}
@@ -145,7 +143,7 @@ export function Header() {
       </div>
 
       {mobileOpen ? (
-        <div className="border-t border-slate-200 bg-white xl:hidden dark:border-white/10 dark:bg-[#0b1f45]">
+        <div className="border-t border-slate-200 bg-white xl:hidden">
           <nav
             className="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6"
             aria-label="Mobile"
@@ -153,21 +151,21 @@ export function Header() {
             {navigation.map((item) => (
               <div
                 key={item.label}
-                className="rounded-lg border border-slate-100 dark:border-white/10"
+                className="rounded-lg border border-slate-100"
               >
                 <Link
                   href={item.href}
-                  className="block px-3 py-2.5 text-sm font-semibold text-brand-navy dark:text-white"
+                  className="block px-3 py-2.5 text-sm font-semibold text-brand-navy"
                 >
                   {item.label}
                 </Link>
                 {"children" in item && item.children ? (
-                  <div className="border-t border-slate-100 px-2 py-2 dark:border-white/10">
+                  <div className="border-t border-slate-100 px-2 py-2">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block rounded-md px-2 py-2 text-sm text-slate-600 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-white/5"
+                        className="block rounded-md px-2 py-2 text-sm text-slate-600 hover:bg-slate-50"
                       >
                         {child.label}
                       </Link>

@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "360° Fire, EHS & Digital Safety Solutions",
   description:
     "Leading Fire Safety, Environment, Health & Safety (EHS), ESG, Digital Safety, and Industrial Consulting company in India. Fire NOC, safety audits, training, and AI safety monitoring.",
-  url: "https://safetyspheresolution.com",
+  url: "https://safetyspheresolution.vercel.app",
   phone: "+91 77638 06992",
   email: "safetyspheresolution@gmail.com",
   whatsapp: "917763806992",
