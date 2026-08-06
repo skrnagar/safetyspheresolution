@@ -1,17 +1,28 @@
-import type { Metadata } from "next";
 import { faqs } from "@/content/site-content";
 import { PageHero } from "@/components/shared/page-hero";
 import { Cta } from "@/components/home/cta";
+import { JsonLd, breadcrumbSchema, faqSchema } from "@/components/shared/json-ld";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "FAQ | Fire NOC, Safety Audits & EHS Consulting",
+export const metadata = buildMetadata({
+  title: "FAQ — Fire NOC, Safety Audits & EHS Consulting",
   description:
-    "Frequently asked questions about Fire NOC, fire protection systems, industrial training, and digital safety solutions.",
-};
+    "Frequently asked questions about Fire NOC, fire protection systems, industrial training, LOTO, and digital safety solutions from Safety Sphere Solution.",
+  path: "/faq",
+  keywords: ["Fire NOC FAQ", "EHS Consulting FAQ", "Safety Audit Questions"],
+});
 
 export default function FaqPage() {
   return (
     <>
+      <JsonLd
+        id="faq-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "FAQ", path: "/faq" },
+        ])}
+      />
+      <JsonLd id="faq-schema" data={faqSchema()} />
       <PageHero
         eyebrow="FAQ"
         title="Frequently asked questions"

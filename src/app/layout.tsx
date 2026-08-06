@@ -30,7 +30,17 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
-  authors: [{ name: siteConfig.name }],
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: "Industrial Safety Consulting",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: true,
+    telephone: true,
+    address: true,
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -44,12 +54,23 @@ export const metadata: Metadata = {
     title: siteConfig.tagline,
     description: siteConfig.description,
   },
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-IN": "/",
+      en: "/",
+    },
   },
 };
 
@@ -59,7 +80,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
+      <head>
+        <link rel="llms-txt" href="/llms.txt" />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/llms.txt"
+          title="LLMs.txt"
+        />
+      </head>
       <body
         className={`${plusJakarta.variable} ${fraunces.variable} flex min-h-full flex-col bg-background font-sans text-foreground antialiased`}
       >

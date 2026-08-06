@@ -1,17 +1,31 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/content/site-content";
 import { PageHero } from "@/components/shared/page-hero";
+import { JsonLd, breadcrumbSchema } from "@/components/shared/json-ld";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog | Fire Safety, EHS & Digital Safety Insights",
+export const metadata = buildMetadata({
+  title: "Blog — Fire Safety, EHS & Digital Safety Insights",
   description:
-    "Practical articles on Fire NOC, LOTO implementation, AI safety monitoring, and industrial EHS best practices.",
-};
+    "Practical articles on Fire NOC, LOTO implementation, AI safety monitoring, and industrial EHS best practices from Safety Sphere Solution.",
+  path: "/blog",
+  keywords: [
+    "Fire Safety Blog India",
+    "EHS Best Practices",
+    "LOTO Implementation Guide",
+  ],
+});
 
 export default function BlogPage() {
   return (
     <>
+      <JsonLd
+        id="blog-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+        ])}
+      />
       <PageHero
         eyebrow="Blog"
         title="Insights for safer, smarter operations"
@@ -35,7 +49,7 @@ export default function BlogPage() {
                 {post.excerpt}
               </p>
               <p className="mt-5 text-xs text-slate-500">
-                {post.date} · {post.readTime}
+                <time dateTime={post.date}>{post.date}</time> · {post.readTime}
               </p>
             </Link>
           ))}

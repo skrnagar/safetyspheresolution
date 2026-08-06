@@ -70,6 +70,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.16 }}
+          data-speakable
           className="mt-5 max-w-xl text-base leading-relaxed text-white/78 md:text-lg"
         >
           Empowering Industries with Safer, Smarter and Sustainable Workplaces.

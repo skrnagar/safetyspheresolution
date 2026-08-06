@@ -1,18 +1,32 @@
-import type { Metadata } from "next";
 import { FileDown } from "lucide-react";
 import { downloads } from "@/content/site-content";
 import { PageHero } from "@/components/shared/page-hero";
 import { Button } from "@/components/ui/button";
+import { JsonLd, breadcrumbSchema } from "@/components/shared/json-ld";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Downloads | Company Profile & Brochure",
+export const metadata = buildMetadata({
+  title: "Downloads — Company Profile & Brochure",
   description:
-    "Download the Safety Sphere Solution company profile and service brochure.",
-};
+    "Download the Safety Sphere Solution company profile and service brochure covering fire safety, EHS, ESG, training, and digital safety capabilities.",
+  path: "/downloads",
+  keywords: [
+    "Safety Sphere Company Profile",
+    "Fire Safety Brochure",
+    "EHS Consulting Brochure",
+  ],
+});
 
 export default function DownloadsPage() {
   return (
     <>
+      <JsonLd
+        id="downloads-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Downloads", path: "/downloads" },
+        ])}
+      />
       <PageHero
         eyebrow="Downloads"
         title="Company profile & service brochure"
@@ -29,9 +43,7 @@ export default function DownloadsPage() {
               <h2 className="mt-4 font-display text-2xl font-semibold text-brand-navy">
                 {item.title}
               </h2>
-              <p className="mt-2 text-sm text-slate-600">
-                {item.description}
-              </p>
+              <p className="mt-2 text-sm text-slate-600">{item.description}</p>
               <Button asChild className="mt-6">
                 <a href={item.file} download>
                   Download PDF

@@ -12,10 +12,35 @@ import { VisionMission } from "@/components/home/vision-mission";
 import { WhyChoose } from "@/components/home/why-choose";
 import { FaqPreview } from "@/components/home/faq-preview";
 import { ContactPreview } from "@/components/home/contact-preview";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  faqSchema,
+  speakableSchema,
+} from "@/components/shared/json-ld";
+import { buildMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
+
+export const metadata = buildMetadata({
+  title: `${siteConfig.name} | Fire Safety, EHS & Digital Safety Consultant India`,
+  description: siteConfig.description,
+  path: "/",
+  keywords: [
+    "Fire Safety Consultant Nagpur",
+    "Fire Safety Consultant Raipur",
+    "Industrial EHS Consulting India",
+  ],
+});
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd
+        id="home-breadcrumb"
+        data={breadcrumbSchema([{ name: "Home", path: "/" }])}
+      />
+      <JsonLd id="home-faq" data={faqSchema()} />
+      <JsonLd id="home-speakable" data={speakableSchema()} />
       <Hero />
       <Stats />
       <About />

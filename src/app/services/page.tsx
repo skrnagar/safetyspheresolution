@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -6,16 +5,31 @@ import { services } from "@/content/site-content";
 import { PageHero } from "@/components/shared/page-hero";
 import { AnimateIn } from "@/components/shared/animate-in";
 import { Cta } from "@/components/home/cta";
+import { JsonLd, breadcrumbSchema } from "@/components/shared/json-ld";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Services | Fire Safety, EHS, Training & Digital Safety",
+export const metadata = buildMetadata({
+  title: "Services — Fire Safety, EHS, Training & Digital Safety",
   description:
-    "Explore Fire Safety Engineering, EHS consulting, professional training, AI safety monitoring, and audit services from Safety Sphere Solution.",
-};
+    "Explore Fire Safety Engineering, EHS consulting, professional training, AI safety monitoring, and audit services from Safety Sphere Solution across India.",
+  path: "/services",
+  keywords: [
+    "Fire Safety Services India",
+    "EHS Consulting Services",
+    "Industrial Safety Training Services",
+  ],
+});
 
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd
+        id="services-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ])}
+      />
       <PageHero
         eyebrow="Services"
         title="Complete Fire, EHS & Digital Safety ecosystem"
@@ -34,7 +48,7 @@ export default function ServicesPage() {
                   <div className="relative min-h-[220px]">
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={`${service.title} — Safety Sphere Solution`}
                       fill
                       className="object-cover transition duration-700 group-hover:scale-105"
                       sizes="300px"

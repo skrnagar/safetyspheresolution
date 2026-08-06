@@ -8,6 +8,12 @@ import { PageHero } from "@/components/shared/page-hero";
 import { Button } from "@/components/ui/button";
 import { Cta } from "@/components/home/cta";
 import { AnimateIn } from "@/components/shared/animate-in";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  serviceSchema,
+} from "@/components/shared/json-ld";
+import { buildMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -19,11 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
-  return {
-    title: `${service.title} | Safety Sphere Solution`,
-    description: service.short,
-    alternates: { canonical: `/services/${service.slug}` },
-  };
+  return buildMetadata({
+    title: `${service.title} Consultant India`,
+    description: `${service.short} Trusted ${service.title.toLowerCase()} by Safety Sphere Solution — Nagpur & Raipur, pan-India delivery.`,
+    path: `/services/${service.slug}`,
+    keywords: [service.title, ...service.items.slice(0, 8)],
+  });
 }
 
 export default async function ServiceDetailPage({ params }: Props) {
@@ -36,6 +43,15 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   return (
     <>
+      <JsonLd
+        id="service-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+          { name: service.title, path: `/services/${service.slug}` },
+        ])}
+      />
+      <JsonLd id="service-schema" data={serviceSchema(service)} />
       <PageHero
         eyebrow="Services"
         title={service.title}
